@@ -15,6 +15,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Diagnostiks\Diagnostiks\Diagnostiks.projitems*{52abf2d6-bbfe-4147-ae40-b8f24ba51c7f}*SharedItemsImports = 4
 		Diagnostiks\Diagnostiks\Diagnostiks.projitems*{54c2367f-4fa6-470f-8880-8553587c90df}*SharedItemsImports = 4
+		Diagnostiks\Diagnostiks\Diagnostiks.projitems*{cefffae2-7420-4364-8a92-047f82bf4c5a}*SharedItemsImports = 4
 		Diagnostiks\Diagnostiks\Diagnostiks.projitems*{d940b760-0440-402b-9172-e897ef8f2b35}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

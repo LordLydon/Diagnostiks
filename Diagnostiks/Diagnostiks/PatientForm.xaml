@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Diagnostiks.PatientForm">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,20,0,0"
+                    Android="0"
+                    WinPhone="0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Entry x:Name="NombreEntry" Placeholder="Nombre"/>
+            <Entry x:Name="ApellidoEntry" Placeholder="Apellido" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Crear" Clicked="Create" />
+                <Button Text="Cancelar" Clicked="Cancel" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

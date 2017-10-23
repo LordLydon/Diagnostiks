@@ -1,9 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Diagnostiks"
-             x:Class="Diagnostiks.MainPage">
+             x:Class="Diagnostiks.PatientDetail">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
                     iOS="0,20,0,0"
@@ -12,16 +10,22 @@
     </ContentPage.Padding>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Clicked="AddPaciente" />
+        <ToolbarItem Text="+" Clicked="AddDiagnostico" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <ScrollView VerticalOptions="FillAndExpand">
-                <ListView ItemsSource="{Binding}" ItemSelected="NavigateToPatientView">
+                <ListView x:Name="DiagnosticsList" ItemsSource="{Binding}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding FullName}" Detail="{Binding LastDiagnostic}" />
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Editar" IsDestructive="False" CommandParameter="{Binding}" Clicked="EditDiagnostico"></MenuItem>
+                                    <MenuItem Text="Eliminar" IsDestructive="True" CommandParameter="{Binding}" Clicked="DeleteDiagnostico"></MenuItem>
+                                </ViewCell.ContextActions>
+                                <Label Text="{Binding}"></Label>
+                            </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

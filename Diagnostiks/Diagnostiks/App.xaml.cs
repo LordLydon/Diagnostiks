@@ -13,7 +13,7 @@ namespace Diagnostiks
 		{
 			InitializeComponent();
 
-			MainPage = new Diagnostiks.MainPage();
+			MainPage = new NavigationPage(new Diagnostiks.MainPage());
 		}
 
 		protected override void OnStart ()
